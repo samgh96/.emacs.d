@@ -24,6 +24,36 @@
   :hook (prog-mode . lsp-deferred)
   :commands (lsp lsp-deferred))
 
+(use-package ccls
+  :ensure t)
+
+(use-package go-mode
+  :ensure t)
+
+(use-package terraform-mode
+  :ensure t)
+
+(use-package json-mode
+  :ensure t)
+
+(use-package yaml-mode
+  :ensure t)
+
+(use-package toml-mode
+  :ensure t)
+
+(use-package elixir-mode
+  :ensure t)
+
+(use-package dockerfile-mode
+  :ensure t)
+
+(use-package docker-compose-mode
+  :ensure t)
+
+(use-package k8s-mode
+  :ensure t)
+
 (use-package lsp-ui
   :ensure t
   :commands lsp-ui-mode)
@@ -33,6 +63,9 @@
 
 (use-package all-the-icons
   :ensure t)
+
+(use-package display-line-numbers
+  :hook (prog-mode . display-line-numbers-mode))
 
 (use-package solaire-mode
   :ensure t
@@ -52,13 +85,13 @@
   :config
   (setq doom-themes-enable-bold t
 	doom-themes-enable-italic t)
-  (load-theme 'doom-tokyo-night t)
+  (load-theme 'doom-outrun-electric t)
   ;; Enable flashing mode-line on errors
   (doom-themes-visual-bell-config)
   ;; Enable custom neotree theme (all-the-icons must be installed!)
   (doom-themes-neotree-config)
   ;; or for treemacs users
-  (setq doom-themes-treemacs-theme "doom-tokyo-night") ; use "doom-colors" for less minimal icon theme
+  (setq doom-themes-treemacs-theme "doom-colors") ; use "doom-colors" for less minimal icon theme
   (doom-themes-treemacs-config)
   ;; Corrects (and improves) org-mode's native fontification.
   (doom-themes-org-config))
