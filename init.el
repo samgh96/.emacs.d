@@ -7,8 +7,8 @@
 (setq warning-minimum-level :error) ; disable low-level warnings
 (setq backup-directory-alist '((".*" . "~/.trash"))) ; move all backups to one folder
 
-(require 'global-modes)
 (require 'use-package)
+(require 'global-modes)
 (require 'binds)
 
 (custom-set-variables
@@ -25,10 +25,10 @@
      "8b6506330d63e7bc5fb940e7c177a010842ecdda6e1d1941ac5a81b13191020e"
      default))
  '(package-selected-packages
-   '(flymake-cursor highlight-indent-guides go-mode lsp-go ccls
-		    select-themes smartparens multiple-cursors helm
-		    all-the-icons dap-mode lsp-ui lsp-mode
-		    solaire-mode doom-themes company)))
+   '(magit ansible flymake-cursor highlight-indent-guides go-mode lsp-go
+	   ccls select-themes smartparens multiple-cursors helm
+	   all-the-icons dap-mode lsp-ui lsp-mode solaire-mode
+	   doom-themes company)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

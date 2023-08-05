@@ -13,9 +13,15 @@
 	 ("C-<" . mc/mark-previous-like-this)
 	 ("C-c C-<" . mc/mark-all-like-this)))
 
+(use-package magit
+  :ensure t)
+
 (use-package company
   :ensure t
   :hook (prog-mode . company-mode))
+
+(use-package flymake-cursor
+  :ensure t)
 
 (use-package lsp-mode
   :ensure t
@@ -23,9 +29,6 @@
   (setq lsp-keymap-prefix "C-c l")
   :hook (prog-mode . lsp-deferred)
   :commands (lsp lsp-deferred))
-
-(use-package flymake-cursor
-  :ensure t)
 
 (use-package ccls
   :ensure t)
@@ -55,6 +58,9 @@
   :ensure t)
 
 (use-package k8s-mode
+  :ensure t)
+
+(use-package ansible
   :ensure t)
 
 (use-package lsp-ui
