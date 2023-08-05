@@ -16,6 +16,9 @@
 (use-package magit
   :ensure t)
 
+(use-package vterm
+  :ensure t)
+
 (use-package company
   :ensure t
   :hook (prog-mode . company-mode))

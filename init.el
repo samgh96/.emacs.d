@@ -25,8 +25,8 @@
      "8b6506330d63e7bc5fb940e7c177a010842ecdda6e1d1941ac5a81b13191020e"
      default))
  '(package-selected-packages
-   '(magit ansible flymake-cursor highlight-indent-guides go-mode lsp-go
-	   ccls select-themes smartparens multiple-cursors helm
+   '(vterm magit ansible flymake-cursor highlight-indent-guides go-mode
+	   lsp-go ccls select-themes smartparens multiple-cursors helm
 	   all-the-icons dap-mode lsp-ui lsp-mode solaire-mode
 	   doom-themes company)))
 (custom-set-faces
