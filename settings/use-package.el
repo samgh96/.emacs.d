@@ -24,6 +24,9 @@
   :hook (prog-mode . lsp-deferred)
   :commands (lsp lsp-deferred))
 
+(use-package flymake-cursor
+  :ensure t)
+
 (use-package ccls
   :ensure t)
 
@@ -56,7 +59,9 @@
 
 (use-package lsp-ui
   :ensure t
-  :commands lsp-ui-mode)
+  :commands lsp-ui-mode
+  :config
+  (setq lsp-ui-doc-show-with-cursor 1))
 
 (use-package dap-mode
   :ensure t)
@@ -65,7 +70,18 @@
   :ensure t)
 
 (use-package display-line-numbers
-  :hook (prog-mode . display-line-numbers-mode))
+  :hook (prog-mode . display-line-numbers-mode)
+  :hook (json-mode . display-line-numbers-mode))
+
+(use-package hl-line-mode
+  :hook (prog-mode . hl-line-mode))
+
+(use-package highlight-indent-guides
+  :ensure t
+  :hook (prog-mode . highlight-indent-guides-mode)
+  :hook (yaml-mode . highlight-indent-guides-mode)
+  :config
+  (setq highlight-indent-guides-method 'character))
 
 (use-package solaire-mode
   :ensure t
