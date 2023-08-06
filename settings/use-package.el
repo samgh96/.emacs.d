@@ -110,7 +110,7 @@
   :config
   (setq doom-themes-enable-bold t
 	doom-themes-enable-italic t)
-  (load-theme 'doom-outrun-electric t)
+  (load-theme 'doom-monokai-pro t)
   ;; Enable flashing mode-line on errors
   (doom-themes-visual-bell-config)
   ;; Enable custom neotree theme (all-the-icons must be installed!)

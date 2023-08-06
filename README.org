@@ -1,0 +1,35 @@
+* .emacs.d
+
+My current emacs config. Maybe you want to take a look and see
+something you don't know how to set or you want to replicate my
+working environment just to judge me; either way tell me what do you
+think!
+
+** File structure
+
+ - *init.el*: Just used for settings loading, MELPA config and few
+   ~setq~ regarding warning level logging (useful for hiding
+   emacs-devel shenanigans) and backup directory location (that way
+   you don't lose backups and it keeps your working directories
+   pristine).
+
+ - *settings/use-package.el*: Package installation and config is
+   located here, from tools like ~lsp~ or ~helm~ to cosmetic packages
+   like ~doom-themes~.
+
+ - *settings/binds.el*: Like its name suggests this file stores global
+   binds. I'm pretty sure everything in here could be in
+   ~use-package.el~ (or maybe built-in packages could be defined here
+   with ~use-package~.
+
+ - *settings/global-modes.el*: This file stores global modes info (the
+   same I said about ~binds.el~ can be applied here). Also I have here
+   all font config, not the best place but who cares really?
+
+** WIP
+
+ - Better file structure.
+
+ - ~org-agenda~ and ~org-roam~.
+
+ - Take this repo and make it a submodule of dotfiles.
