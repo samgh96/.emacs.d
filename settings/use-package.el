@@ -110,7 +110,7 @@
   :config
   (setq doom-themes-enable-bold t
 	doom-themes-enable-italic t)
-  (load-theme 'doom-monokai-pro t)
+  (load-theme 'doom-bluloco-dark t)
   ;; Enable flashing mode-line on errors
   (doom-themes-visual-bell-config)
   ;; Enable custom neotree theme (all-the-icons must be installed!)
@@ -120,3 +120,10 @@
   (doom-themes-treemacs-config)
   ;; Corrects (and improves) org-mode's native fontification.
   (doom-themes-org-config))
+
+(use-package org-roam
+  :ensure t
+  :config
+  (setq org-roam-directory
+	(file-truename "~/files/roam"))
+  (org-roam-db-autosync-mode))
