@@ -110,7 +110,7 @@
   :config
   (setq doom-themes-enable-bold t
 	doom-themes-enable-italic t)
-  (load-theme 'doom-bluloco-dark t)
+  (load-theme 'doom-moonlight t)
   ;; Enable flashing mode-line on errors
   (doom-themes-visual-bell-config)
   ;; Enable custom neotree theme (all-the-icons must be installed!)
@@ -127,3 +127,13 @@
   (setq org-roam-directory
 	(file-truename "~/files/roam"))
   (org-roam-db-autosync-mode))
+
+(use-package org-journal
+  :ensure t
+  :bind
+  ("C-c n j" . org-journal-new-entry)
+  :custom
+  (org-journal-date-prefix "#+title: ")
+  (org-journal-file-format "%Y-%m-%d.org")
+  (org-journal-dir "~/files/roam/journal/")
+  (org-journal-date-format "%A, %d %B %Y"))
