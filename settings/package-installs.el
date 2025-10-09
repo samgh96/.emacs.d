@@ -250,7 +250,22 @@
   (org-journal-dir "~/files/roam/journal/")
   (org-journal-date-format "%A, %d %B %Y"))
 
+(use-package ob-mermaid
+  :straight t)
+
+(setq ob-mermaid-cli-path "mmdc")
+
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ 
+ '((org . t)
+   (mermaid . t)
+   (latex . t)))
+
 ;; minor modes
+
+(use-package mermaid-mode
+  :straight t)
 
 (use-package markdown-mode
   :straight t)
