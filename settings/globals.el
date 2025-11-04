@@ -6,6 +6,13 @@
 (tool-bar-mode 0)
 (blink-cursor-mode 0)
 
+(setq auto-mode-alist
+      (append
+       '(
+	 ("\\.ex\\'" . elixir-ts-mode)
+	 )
+       auto-mode-alist))
+
 ;; font
 (add-to-list 'default-frame-alist '(font . "IBM Plex Mono 13"))
 (set-face-attribute 'default t :font "IBM Plex Mono 13")

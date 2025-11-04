@@ -264,9 +264,6 @@
 
 ;; minor modes
 
-(use-package mermaid-mode
-  :straight t)
-
 (use-package markdown-mode
   :straight t)
 
@@ -309,6 +306,25 @@
 (use-package cue-mode
   :straight t)
 
+;; language specifics
+
+;; elixir
+;; from https://blog.digressed.net/2025-09-30-emacs-30-1-elixir.html
+(use-package inf-elixir
+  :straight t
+  :bind (("C-c C-c i i" . 'inf-elixir)
+         ("C-c C-c i p" . 'inf-elixir-project)
+         ("C-c C-c i l" . 'inf-elixir-send-line)
+         ("C-c C-c i r" . 'inf-elixir-send-region)
+         ("C-c C-c i b" . 'inf-elixir-send-buffer)
+         ("C-c C-c i R" . 'inf-elixir-reload-module)))
+
+(use-package exunit
+  :straight t
+  :config
+  (add-hook 'elixir-mode-hook 'exunit)
+  (setq transient-default-level 5))
+
 ;; cosmetics
 
 (use-package all-the-icons
@@ -342,7 +358,7 @@
   :config
   (setq doom-themes-enable-bold t
 	doom-themes-enable-italic t)
-  (load-theme 'doom-feather-dark t)
+  (load-theme 'doom-bluloco-dark t)
   ;; Enable flashing mode-line on errors
   (doom-themes-visual-bell-config)
   ;; Enable custom neotree theme (all-the-icons must be installed!)
